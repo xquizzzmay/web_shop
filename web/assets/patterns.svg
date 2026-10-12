@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 160" width="120" height="160" color="#ece4d6">
+<!-- Икат для фона. Как background-image: тайл 120x160 (тон кости, очень тихий). Инлайном: <use href="#ikat-motif"/> или fill="url(#ikat)", цвет через CSS color. -->
+<defs>
+<symbol id="ikat-motif" viewBox="0 0 120 160"><path fill="currentColor" fill-opacity=".05" d="M60,10 66,22 63,25 72,40 68,44 80,62 75,66 88,80 75,94 80,98 68,116 72,120 63,135 66,138 60,150 54,138 57,135 48,120 52,116 40,98 45,94 32,80 45,66 40,62 52,44 48,40 57,25 54,22Z"/><path fill="currentColor" fill-opacity=".035" d="M60,52 64,62 62,64 70,80 62,96 64,98 60,108 56,98 58,96 50,80 58,64 56,62Z"/><path fill="currentColor" fill-opacity=".04" d="M0,76h6v8h-6zM114,76h6v8h-6zM58,0h4v4h-4zM58,156h4v4h-4z"/></symbol>
+<pattern id="ikat" width="120" height="160" patternUnits="userSpaceOnUse"><use href="#ikat-motif" width="120" height="160"/></pattern>
+</defs>
+<rect width="120" height="160" fill="url(#ikat)"/>
+</svg>

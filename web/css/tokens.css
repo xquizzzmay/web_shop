@@ -1,0 +1,116 @@
+/* Hallmark · macrostructure: Feature Stack + pinned horizontal track · tone: luxury dark · anchor hue: 22 (pomegranate) · theme: custom "Fergana silk" */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..800&family=JetBrains+Mono:wght@400&family=Manrope:wght@400..700&display=swap");
+
+/* Fergana silk — все цвета, шрифты, движение и размеры. Компоненты берут значения только отсюда. */
+:root {
+  color-scheme: dark;
+
+  /* Поверхности и текст: тёплый чёрный, кость */
+  --color-paper:    oklch(14% 0.012 40);
+  --color-paper-2:  oklch(18% 0.014 40);
+  --color-paper-3:  oklch(23% 0.016 40);
+  --color-ink:      oklch(94% 0.014 80);
+  --color-muted:    oklch(70% 0.014 70);
+  --color-rule:     oklch(94% 0.014 80 / 0.12);
+  --color-rule-strong: oklch(94% 0.014 80 / 0.28);
+
+  /* Акценты: гранат и шафран */
+  --color-accent:       oklch(62% 0.19 22);
+  /* Заливка кнопки темнее акцента: текст --color-on-accent ≥ 4.5:1 (WCAG AA) во всех состояниях */
+  --color-accent-fill:  oklch(54% 0.19 22);
+  --color-accent-hover: oklch(56% 0.19 22);
+  --color-accent-press: oklch(50% 0.19 22);
+  --color-accent-2:     oklch(80% 0.12 80);
+  --color-focus:        var(--color-accent-2);
+  --color-on-accent:    oklch(97% 0.01 80);
+
+  /* Статусы (только для форм и тостов) */
+  --color-danger:  oklch(70% 0.17 28);
+  --color-success: oklch(76% 0.12 150);
+
+  /* Оверлеи */
+  --color-scrim:   oklch(10% 0.01 40 / 0.6);
+  --color-glass:   oklch(18% 0.014 40 / 0.72);
+
+  /* Ткани — фронт ставит color: var(--silk-N) на <svg> */
+  --silk-1: oklch(58% 0.2 22);    /* гранатовый атлас */
+  --silk-2: oklch(78% 0.13 80);   /* шафран */
+  --silk-3: oklch(42% 0.12 265);  /* индиго */
+  --silk-4: oklch(55% 0.11 160);  /* малахит */
+
+  /* Шрифты — Playfair только roman (есть кириллица; css2 сам отдаёт её через unicode-range) */
+  --font-display: "Playfair Display", "Didot", ui-serif, serif;
+  --font-body:    "Manrope", ui-sans-serif, sans-serif;
+  --font-mono:    "JetBrains Mono", ui-monospace, monospace;
+
+  /* Типографическая шкала — perfect fourth (1.333), жидкая */
+  --text-xs:      clamp(0.6875rem, 0.66rem + 0.1vw, 0.75rem);   /* 11–12 */
+  --text-sm:      clamp(0.8125rem, 0.79rem + 0.12vw, 0.875rem); /* 13–14 */
+  --text-base:    clamp(1rem, 0.96rem + 0.18vw, 1.0625rem);     /* 16–17 */
+  --text-lg:      clamp(1.1875rem, 1.1rem + 0.4vw, 1.375rem);   /* 19–22 */
+  --text-xl:      clamp(1.5rem, 1.3rem + 0.9vw, 1.875rem);      /* 24–30 */
+  --text-2xl:     clamp(1.875rem, 1.5rem + 1.6vw, 2.75rem);     /* 30–44 */
+  --text-4xl:     clamp(2.5rem, 1.7rem + 3.6vw, 5rem);          /* 40–80 */
+  --text-display: clamp(3.25rem, 1.4rem + 8.4vw, 9rem);         /* 52–144 */
+
+  --leading-tight: 1.04;
+  --leading-snug:  1.2;
+  --leading-body:  1.6;
+  --tracking-display: -0.02em;
+  --tracking-caps:    0.14em;
+  --measure: 62ch;
+
+  /* Отступы, шаг 4pt */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+  --space-11: 160px;
+  --space-12: 224px;
+  --gutter: clamp(var(--space-4), 4vw, var(--space-8));
+
+  /* Радиусы */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --radius-lg: 18px;
+  --radius-pill: 999px;
+
+  /* Линии */
+  --rule-hair: 1px solid var(--color-rule);
+  --rule-strong: 1px solid var(--color-rule-strong);
+  --rule-accent: 1px solid var(--color-accent);
+  --focus-ring: 2px solid var(--color-focus);
+  --focus-offset: 3px;
+
+  /* Движение — только transform и opacity */
+  --ease-out:    cubic-bezier(.16, 1, .3, 1);
+  --ease-in:     cubic-bezier(.7, 0, .84, 0);
+  --ease-in-out: cubic-bezier(.65, 0, .35, 1);
+  --dur-fast: 160ms;
+  --dur-base: 320ms;
+  --dur-slow: 900ms;
+
+  /* Слои */
+  --z-nav: 50;
+  --z-scrim: 80;
+  --z-drawer: 90;
+  --z-toast: 100;
+
+  --drawer-width: min(440px, 100vw);
+  --tap: 44px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 1ms;
+    --dur-base: 1ms;
+    --dur-slow: 1ms;
+  }
+}

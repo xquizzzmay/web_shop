@@ -1,0 +1,72 @@
+{
+  "currency": "UZS",
+  "telegram": "shxawenya",
+  "products": [
+    {
+      "id": "atlas-chapan",
+      "name": "Чапан «Атлас»",
+      "category": "outerwear",
+      "price": 2450000,
+      "fabric": "маргиланский атлас, 100% шёлк; подклад — хлопок",
+      "sizes": ["S", "M", "L", "XL"],
+      "silk": "--silk-1",
+      "svg": "assets/garments/atlas-chapan.svg",
+      "note": "Длинный халат свободного кроя, расширяется к подолу; кант по вороту, бортам и манжетам."
+    },
+    {
+      "id": "adras-jacket",
+      "name": "Жакет «Адрас»",
+      "category": "outerwear",
+      "price": 1680000,
+      "fabric": "адрас — шёлковая основа, хлопковый уток",
+      "sizes": ["S", "M", "L", "XL"],
+      "silk": "--silk-2",
+      "svg": "assets/garments/adras-jacket.svg",
+      "note": "Укороченный прямой жакет с воротником-стойкой и тремя петлями-застёжками, рукав три четверти."
+    },
+    {
+      "id": "ikat-shirt",
+      "name": "Рубашка «Икат»",
+      "category": "shirts",
+      "price": 980000,
+      "fabric": "шёлк с узором икат",
+      "sizes": ["S", "M", "L", "XL"],
+      "silk": "--silk-3",
+      "svg": "assets/garments/ikat-shirt.svg",
+      "note": "Оверсайз со спущенным плечом, отложной воротник, скруглённый подол с боковыми разрезами."
+    },
+    {
+      "id": "silk-dress",
+      "name": "Платье «Фергана»",
+      "category": "dresses",
+      "price": 2100000,
+      "fabric": "шёлковый атлас, 100% шёлк",
+      "sizes": ["S", "M", "L", "XL"],
+      "silk": "--silk-4",
+      "svg": "assets/garments/silk-dress.svg",
+      "note": "Платье в пол: приталенный лиф, пышное плечо, расклёшенная юбка от линии талии."
+    },
+    {
+      "id": "wide-trousers",
+      "name": "Брюки «Сой»",
+      "category": "trousers",
+      "price": 890000,
+      "fabric": "плотный шёлк в тонкую полоску",
+      "sizes": ["S", "M", "L", "XL"],
+      "silk": "--silk-3",
+      "svg": "assets/garments/wide-trousers.svg",
+      "note": "Широкие прямые брюки с высокой посадкой, защипы спереди, подворот по низу."
+    },
+    {
+      "id": "silk-scarf",
+      "name": "Платок «Икат»",
+      "category": "accessories",
+      "price": 420000,
+      "fabric": "лёгкий шёлк с узором икат",
+      "sizes": ["ONE"],
+      "silk": "--silk-2",
+      "svg": "assets/garments/silk-scarf.svg",
+      "note": "Длинный платок с бахромой по краю, носится на плечах или на голове."
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{ "currency": "UZS", "telegram": "shxawenya",
+  "products": [
+    { "id": "atlas-chapan", "name": "Чапан «Атлас»", "category": "outerwear", "price": 2450000,
+      "fabric": "маргиланский атлас, 100% шёлк", "sizes": ["S","M","L","XL"], "silk": "--silk-1",
+      "svg": "assets/garments/atlas-chapan.svg", "note": "тестовая фикстура" },
+    { "id": "adras-shirt", "name": "Рубашка «Адрас»", "category": "shirts", "price": 890000,
+      "fabric": "адрас, шёлк и хлопок", "sizes": ["S","M","L"], "silk": "--silk-2",
+      "svg": "assets/garments/adras-shirt.svg", "note": "тестовая фикстура" },
+    { "id": "ikat-dress", "name": "Платье «Икат»", "category": "dresses", "price": 1750000,
+      "fabric": "шёлковый икат", "sizes": ["XS","S","M","L"], "silk": "--silk-3",
+      "svg": "assets/garments/ikat-dress.svg", "note": "тестовая фикстура" },
+    { "id": "silk-trousers", "name": "Брюки «Шойи»", "category": "trousers", "price": 1100000,
+      "fabric": "шойи, 100% шёлк", "sizes": ["S","M","L","XL"], "silk": "--silk-4",
+      "svg": "assets/garments/silk-trousers.svg", "note": "тестовая фикстура" },
+    { "id": "khan-atlas-scarf", "name": "Платок «Хан-атлас»", "category": "accessories", "price": 420000,
+      "fabric": "хан-атлас", "sizes": ["ONE"], "silk": "--silk-1",
+      "svg": "assets/garments/khan-atlas-scarf.svg", "note": "тестовая фикстура" },
+    { "id": "beqasam-coat", "name": "Пальто «Бекасам»", "category": "outerwear", "price": 3200000,
+      "fabric": "бекасам, шёлк и хлопок", "sizes": ["M","L","XL"], "silk": "--silk-3",
+      "svg": "assets/garments/beqasam-coat.svg", "note": "тестовая фикстура" }
+  ] }

@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Claude Fergana — шёлк из Ферганской долины</title>
+<meta name="description" content="Одежда из маргиланского атласа и адраса. Заказ в Telegram.">
+<meta name="theme-color" content="#120d0b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="assets/cloth.bin" as="fetch" type="application/octet-stream" crossorigin>
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/design.css">
+<link rel="stylesheet" href="css/app.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23120d0b'/%3E%3Cpath d='M9 6c6 4 8 12 14 20M23 6c-6 4-8 12-14 20' stroke='%23c8423a' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<script type="module" src="js/app.js"></script>
+</head>
+<body>
+<a class="skip" href="#collection">К коллекции</a>
+
+<header class="nav-pill" data-nav>
+  <a class="nav-pill__brand" href="#top" aria-label="Claude Fergana — наверх">Claude Fergana</a>
+  <nav class="nav-pill__links" aria-label="Разделы">
+    <a href="#collection">Коллекция</a>
+    <a href="#craft">Ткань</a>
+    <a href="#order">Заказ</a>
+  </nav>
+  <button class="nav-pill__cart" type="button" data-cart-open aria-label="Корзина, 0 вещей">
+    Корзина <span class="nav-pill__count" data-cart-count>0</span>
+  </button>
+</header>
+
+<main id="top">
+  <!-- ── Hero: шёлк на ветру (WebGL, физика из sim/cloth.c) ── -->
+  <section class="hero" aria-labelledby="hero-title">
+    <canvas class="hero__cloth" data-cloth aria-hidden="true"></canvas>
+    <div class="hero__grain" aria-hidden="true"></div>
+    <div class="hero__copy">
+      <p class="eyebrow hero__eyebrow" data-reveal>Осень — зима 2026 · Маргилан</p>
+      <h1 class="hero__title" id="hero-title">
+        <span class="line" data-split>Шёлк, который</span>
+        <span class="line" data-split>помнит <span class="hero__accent">ветер</span>.</span>
+      </h1>
+      <p class="hero__lede" data-reveal>Атлас и адрас ручной окраски абр. Шесть вещей, сшитых в Фергане.</p>
+      <a class="hero__link" href="#collection" data-reveal>Смотреть коллекцию <span aria-hidden="true">→</span></a>
+    </div>
+    <p class="hero__caption eyebrow" aria-hidden="true">Полотно 01 · атлас · 32 × 20 узлов</p>
+  </section>
+
+  <!-- ── Коллекция: горизонтальный трек, едет слева направо ── -->
+  <section class="track" id="collection" aria-labelledby="collection-title" data-track>
+    <div class="track__sticky">
+      <div class="track__head">
+        <h2 id="collection-title" class="track__title">Коллекция</h2>
+        <p class="track__counter eyebrow" aria-live="polite"><span data-track-index>01</span> / <span data-track-total>06</span></p>
+      </div>
+      <ol class="track__rail" data-track-rail></ol>
+      <div class="track__progress" aria-hidden="true"><span data-track-progress></span></div>
+    </div>
+  </section>
+
+  <!-- ── Ткань: панели опускаются сверху вниз ── -->
+  <section class="craft" id="craft" aria-labelledby="craft-title" data-craft>
+    <div class="craft__sticky">
+      <div class="craft__aside">
+        <h2 id="craft-title" class="craft__title">Как рождается атлас</h2>
+        <ol class="craft__steps" data-craft-steps>
+          <li class="is-active">Кокон</li>
+          <li>Узлы абр</li>
+          <li>Станок</li>
+          <li>Крой</li>
+        </ol>
+      </div>
+      <div class="craft__stage">
+        <article class="panel" data-panel style="--panel-silk: var(--silk-2)">
+          <p class="panel__num" aria-hidden="true">I</p>
+          <h3>Нить из кокона</h3>
+          <p>Коконы запаривают и сматывают в шёлк-сырец. Нить с одного кокона тянется на сотни метров — поэтому атлас такой гладкий.</p>
+        </article>
+        <article class="panel" data-panel style="--panel-silk: var(--silk-1)">
+          <p class="panel__num" aria-hidden="true">II</p>
+          <h3>Узлы абр</h3>
+          <p>Нити основы перевязывают и красят до ткачества, цвет за цветом. Отсюда размытый край узора — он не напечатан, он вплетён.</p>
+        </article>
+        <article class="panel" data-panel style="--panel-silk: var(--silk-3)">
+          <p class="panel__num" aria-hidden="true">III</p>
+          <h3>Узкий станок</h3>
+          <p>Ткань выходит неширокой полосой. Мы строим крой вокруг этой ширины, а не режем её под лекало.</p>
+        </article>
+        <article class="panel" data-panel style="--panel-silk: var(--silk-4)">
+          <p class="panel__num" aria-hidden="true">IV</p>
+          <h3>Крой в Фергане</h3>
+          <p>Каждую вещь шьют под заказ после вашего сообщения в Telegram. Размер уточняем лично.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Заказ ── -->
+  <section class="order" id="order" aria-labelledby="order-title">
+    <div class="order__intro">
+      <h2 id="order-title" class="order__title">Заказ</h2>
+      <p>Соберите вещи, оставьте имя и телефон — заказ откроется в Telegram у <a href="https://t.me/shxawenya" rel="noopener">@shxawenya</a>. Оплата после примерки размера.</p>
+    </div>
+    <form class="order__form card-hairline" data-order-form novalidate>
+      <div class="order__summary" data-order-summary>
+        <p class="order__empty">Корзина пуста — выберите размер в коллекции.</p>
+      </div>
+      <div class="field">
+        <label for="f-name">Имя</label>
+        <input id="f-name" name="name" autocomplete="name" maxlength="100" required>
+        <p class="field__error" id="f-name-err" hidden>Как к вам обращаться?</p>
+      </div>
+      <div class="field">
+        <label for="f-phone">Телефон</label>
+        <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="100" placeholder="+998 __ ___ __ __" required>
+        <p class="field__error" id="f-phone-err" hidden>Нужен номер, чтобы уточнить размер.</p>
+      </div>
+      <div class="field">
+        <label for="f-note">Комментарий <span class="field__opt">необязательно</span></label>
+        <textarea id="f-note" name="note" rows="3" maxlength="500"></textarea>
+      </div>
+      <button class="btn order__submit" type="submit" data-order-submit>Оформить в Telegram</button>
+      <p class="order__status" data-order-status role="status" aria-live="polite"></p>
+    </form>
+  </section>
+</main>
+
+<footer class="footer">
+  <p class="footer__statement" data-split-footer>Claude Fergana</p>
+  <div class="footer__row">
+    <a href="https://t.me/shxawenya" rel="noopener">Telegram · @shxawenya</a>
+    <span>Фергана, Узбекистан</span>
+    <span>© 2026</span>
+  </div>
+</footer>
+
+<!-- Корзина -->
+<div class="drawer__backdrop" data-cart-backdrop></div>
+<aside class="drawer" data-cart aria-labelledby="cart-title" aria-hidden="true" inert>
+  <div class="drawer__head">
+    <h2 id="cart-title">Корзина</h2>
+    <button class="btn btn--ghost btn--sm" type="button" data-cart-close>Закрыть</button>
+  </div>
+  <div class="drawer__body" data-cart-lines></div>
+  <div class="drawer__foot">
+    <p class="drawer__total">Итого <span class="price" data-cart-total>0 сум</span></p>
+    <a class="btn" href="#order" data-cart-checkout>К оформлению</a>
+  </div>
+</aside>
+
+<div class="toast" data-toast role="status" aria-live="polite"></div>
+
+<template id="tpl-slide">
+  <li class="slide">
+    <figure class="slide__figure">
+      <div class="slide__garment" data-garment></div>
+      <figcaption class="slide__plate eyebrow"></figcaption>
+    </figure>
+    <div class="slide__info">
+      <h3 class="slide__name"></h3>
+      <p class="slide__fabric"></p>
+      <p class="slide__note"></p>
+      <p class="price slide__price"></p>
+      <div class="chips" role="group" aria-label="Размер"></div>
+      <button class="btn slide__add" type="button" disabled>Выберите размер</button>
+    </div>
+  </li>
+</template>
+<noscript><style>.track__rail{display:none}</style></noscript>
+</body>
+</html>
