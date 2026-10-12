@@ -166,10 +166,10 @@ def run_tests(port, root, orders):
     for ext, path in sorted(seen.items()):
         st, h, _ = req(port, "GET", path)
         check(f"MIME {ext} ({path})", st == 200 and h.get("content-type") == mimes[ext], (st, h.get("content-type")))
-    st, h, d = req(port, "GET", "/assets/cloth.bin")
+    st, h, d = req(port, "GET", "/assets/items.svg")
     check("assets/ immutable", h.get("cache-control") == "public, max-age=31536000, immutable", h.get("cache-control"))
-    check("cloth.bin заголовок CFCL", d[:4] == b"CFCL")
-    st, h, _ = req(port, "GET", "/css/app.css")
+    check("items.svg — спрайт", d.lstrip().startswith(b"<svg"))
+    st, h, _ = req(port, "GET", "/css/site.css")
     check("css вне assets/ -> no-cache", h.get("cache-control") == "no-cache")
 
     st, h, d = req(port, "HEAD", "/")
@@ -184,8 +184,8 @@ def run_tests(port, root, orders):
     check("query-строка игнорируется", st == 200)
 
     print("gzip")
-    gz_path = os.path.join(root, "js", "app.js.gz")
-    target = "/js/app.js" if os.path.exists(gz_path) else "/index.html"
+    gz_path = os.path.join(root, "js", "core.js.gz")
+    target = "/js/core.js" if os.path.exists(gz_path) else "/index.html"
     plain = open(os.path.join(root, target.lstrip("/")), "rb").read()
     st, h, d = req(port, "GET", target, headers={"Accept-Encoding": "gzip, deflate, br"})
     check(f"{target} gzip отдан", st == 200 and h.get("content-encoding") == "gzip", h.get("content-encoding"))
@@ -199,10 +199,10 @@ def run_tests(port, root, orders):
     st, h, _ = req(port, "GET", target, headers={"Accept-Encoding": "gzip;q=0, identity"})
     check("gzip;q=0 уважается", "content-encoding" not in h)
     # устаревший .gz (оригинал новее) не отдаём
-    src = os.path.join(root, "css", "app.css")
+    src = os.path.join(root, "css", "site.css")
     if os.path.exists(src + ".gz"):
         os.utime(src, (time.time() + 5, time.time() + 5))
-        st, h, _ = req(port, "GET", "/css/app.css", headers={"Accept-Encoding": "gzip"})
+        st, h, _ = req(port, "GET", "/css/site.css", headers={"Accept-Encoding": "gzip"})
         check("устаревший .gz игнорируется", "content-encoding" not in h)
 
     print("path traversal")
@@ -338,8 +338,8 @@ def bench(port):
         cases = [
             ("GET /api/health keep-alive", ["-k", "-n", "50000", "-c", "50"], "/api/health"),
             ("GET / keep-alive", ["-k", "-n", "50000", "-c", "50"], "/"),
-            ("GET /assets/cloth.bin gzip keep-alive", ["-k", "-n", "5000", "-c", "20", "-H", "Accept-Encoding: gzip"],
-             "/assets/cloth.bin"),
+            ("GET /assets/items.svg gzip keep-alive", ["-k", "-n", "5000", "-c", "20", "-H", "Accept-Encoding: gzip"],
+             "/assets/items.svg"),
             ("GET /js/app.js gzip, без keep-alive", ["-n", "10000", "-c", "50", "-H", "Accept-Encoding: gzip"],
              "/js/app.js"),
             ("POST /api/order keep-alive", ["-k", "-n", "5000", "-c", "20", "-p", body, "-T", "application/json"],

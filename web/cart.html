@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Корзина — Claude Fergana</title>
+<meta name="description" content="Ваша корзина. Заказ подтверждается в Telegram.">
+<meta name="theme-color" content="#f6f4f0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="data/products.json" as="fetch" crossorigin>
+<link rel="preload" href="assets/items.svg" as="fetch" crossorigin>
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23201c18'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23e0442b'/%3E%3C/svg%3E">
+<script type="module" src="js/cart.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">К содержимому</a>
+<header class="bar">
+  <div class="wrap bar__in">
+    <a class="logo" href="index.html"><span class="logo__dot" aria-hidden="true"></span>CLAUDE FERGANA</a>
+    <nav class="bar__nav" aria-label="Разделы"><a href="index.html">Главная</a><a href="catalog.html">Каталог</a><a href="catalog.html?cat=top">Верх</a><a href="catalog.html?cat=bottom">Низ</a><a href="catalog.html?cat=shoes">Обувь</a></nav>
+    <div class="bar__tools">
+      <button class="searchbtn" type="button" data-search aria-label="Поиск"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span>Поиск</span><kbd>/</kbd></button>
+      <a class="cartbtn" href="cart.html" data-cart-link aria-current="page"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>Корзина <span class="count" data-count hidden>0</span></a>
+    </div>
+  </div>
+</header>
+<nav class="tabs" aria-label="Меню">
+  <a href="index.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11 12 4l9 7v9H3z"/><path d="M9 20v-6h6v6"/></svg>Главная</a>
+  <a href="catalog.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg>Каталог</a>
+  <button type="button" data-search><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Поиск</button>
+  <a href="cart.html" data-cart-link aria-current="page"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>Корзина<span class="count" data-count hidden>0</span></a>
+</nav>
+<main id="main">
+<div class="wrap cart" data-cart>
+  <div>
+    <h1>Корзина</h1>
+    <ul class="lines" data-lines></ul>
+    <div class="empty" data-empty hidden><h2>Пока пусто</h2><p>Загляни в каталог — там 50+ вещей.</p><a class="btn" href="catalog.html">В каталог</a></div>
+  </div>
+  <form class="summary" data-form novalidate>
+    <h2>Оформление</h2>
+    <div class="total"><span>Итого</span><b data-total>0 сум</b></div>
+    <div class="fld"><label for="f-name">Имя</label><input id="f-name" name="name" autocomplete="name" maxlength="100" required><small data-err-name></small></div>
+    <div class="fld"><label for="f-phone">Телефон</label><input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+998 __ ___ __ __" maxlength="100" required><small data-err-phone></small></div>
+    <div class="fld"><label for="f-note">Комментарий</label><textarea id="f-note" name="note" maxlength="500" placeholder="Адрес, удобное время"></textarea></div>
+    <button class="btn btn--accent" type="submit" data-submit>Оформить в Telegram</button>
+    <p class="err" data-err role="alert"></p>
+    <p class="pdp__note">Откроется чат с @shxawenya с готовым текстом заказа — останется нажать «Отправить».</p>
+  </form>
+</div>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot__big">Заказ — в Telegram <a href="https://t.me/shxawenya" target="_blank" rel="noopener">@shxawenya</a></p>
+    <div class="foot__row">
+      <nav aria-label="Низ страницы"><a href="catalog.html?cat=top">Верх</a><a href="catalog.html?cat=bottom">Низ</a><a href="catalog.html?cat=shoes">Обувь</a><a href="catalog.html?cat=acc">Аксессуары</a><a href="cart.html">Корзина</a></nav>
+      <p class="muted">Цены в сумах · Claude Fergana, Фергана</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

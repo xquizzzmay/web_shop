@@ -1,72 +1,989 @@
 {
-  "currency": "UZS",
-  "telegram": "shxawenya",
-  "products": [
-    {
-      "id": "atlas-chapan",
-      "name": "Чапан «Атлас»",
-      "category": "outerwear",
-      "price": 2450000,
-      "fabric": "маргиланский атлас, 100% шёлк; подклад — хлопок",
-      "sizes": ["S", "M", "L", "XL"],
-      "silk": "--silk-1",
-      "svg": "assets/garments/atlas-chapan.svg",
-      "note": "Длинный халат свободного кроя, расширяется к подолу; кант по вороту, бортам и манжетам."
-    },
-    {
-      "id": "adras-jacket",
-      "name": "Жакет «Адрас»",
-      "category": "outerwear",
-      "price": 1680000,
-      "fabric": "адрас — шёлковая основа, хлопковый уток",
-      "sizes": ["S", "M", "L", "XL"],
-      "silk": "--silk-2",
-      "svg": "assets/garments/adras-jacket.svg",
-      "note": "Укороченный прямой жакет с воротником-стойкой и тремя петлями-застёжками, рукав три четверти."
-    },
-    {
-      "id": "ikat-shirt",
-      "name": "Рубашка «Икат»",
-      "category": "shirts",
-      "price": 980000,
-      "fabric": "шёлк с узором икат",
-      "sizes": ["S", "M", "L", "XL"],
-      "silk": "--silk-3",
-      "svg": "assets/garments/ikat-shirt.svg",
-      "note": "Оверсайз со спущенным плечом, отложной воротник, скруглённый подол с боковыми разрезами."
-    },
-    {
-      "id": "silk-dress",
-      "name": "Платье «Фергана»",
-      "category": "dresses",
-      "price": 2100000,
-      "fabric": "шёлковый атлас, 100% шёлк",
-      "sizes": ["S", "M", "L", "XL"],
-      "silk": "--silk-4",
-      "svg": "assets/garments/silk-dress.svg",
-      "note": "Платье в пол: приталенный лиф, пышное плечо, расклёшенная юбка от линии талии."
-    },
-    {
-      "id": "wide-trousers",
-      "name": "Брюки «Сой»",
-      "category": "trousers",
-      "price": 890000,
-      "fabric": "плотный шёлк в тонкую полоску",
-      "sizes": ["S", "M", "L", "XL"],
-      "silk": "--silk-3",
-      "svg": "assets/garments/wide-trousers.svg",
-      "note": "Широкие прямые брюки с высокой посадкой, защипы спереди, подворот по низу."
-    },
-    {
-      "id": "silk-scarf",
-      "name": "Платок «Икат»",
-      "category": "accessories",
-      "price": 420000,
-      "fabric": "лёгкий шёлк с узором икат",
-      "sizes": ["ONE"],
-      "silk": "--silk-2",
-      "svg": "assets/garments/silk-scarf.svg",
-      "note": "Длинный платок с бахромой по краю, носится на плечах или на голове."
-    }
-  ]
+ "currency": "UZS",
+ "telegram": "shxawenya",
+ "products": [
+  {
+   "id": "moncler-puhovik-maya",
+   "brand": "Moncler",
+   "title": "Пуховик Maya",
+   "name": "Moncler — Пуховик Maya",
+   "category": "top",
+   "type": "puffer",
+   "price": 14900000,
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "color": "black",
+   "color2": "black",
+   "new": true
+  },
+  {
+   "id": "moncler-puhovik-montcla",
+   "brand": "Moncler",
+   "title": "Пуховик Montcla",
+   "name": "Moncler — Пуховик Montcla",
+   "category": "top",
+   "type": "puffer",
+   "price": 13500000,
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "color": "navy",
+   "color2": "navy",
+   "new": false
+  },
+  {
+   "id": "the-north-face-puhovik-nuptse-1996",
+   "brand": "The North Face",
+   "title": "Пуховик Nuptse 1996",
+   "name": "The North Face — Пуховик Nuptse 1996",
+   "category": "top",
+   "type": "puffer",
+   "price": 3900000,
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "color": "black",
+   "color2": "yellow",
+   "new": true
+  },
+  {
+   "id": "stone-island-puhovik-garment-dyed",
+   "brand": "Stone Island",
+   "title": "Пуховик Garment Dyed",
+   "name": "Stone Island — Пуховик Garment Dyed",
+   "category": "top",
+   "type": "puffer",
+   "price": 8900000,
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "color": "olive",
+   "color2": "olive",
+   "new": false
+  },
+  {
+   "id": "acne-studios-dublenka-shearling",
+   "brand": "Acne Studios",
+   "title": "Дублёнка Shearling",
+   "name": "Acne Studios — Дублёнка Shearling",
+   "category": "top",
+   "type": "sheepskin",
+   "price": 17500000,
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "color": "brown",
+   "color2": "cream",
+   "new": true
+  },
+  {
+   "id": "gucci-dublenka-s-mehom",
+   "brand": "Gucci",
+   "title": "Дублёнка с мехом",
+   "name": "Gucci — Дублёнка с мехом",
+   "category": "top",
+   "type": "sheepskin",
+   "price": 29900000,
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "color": "camel",
+   "color2": "cream",
+   "new": false
+  },
+  {
+   "id": "prada-dublenka-re-nylon",
+   "brand": "Prada",
+   "title": "Дублёнка Re-Nylon",
+   "name": "Prada — Дублёнка Re-Nylon",
+   "category": "top",
+   "type": "sheepskin",
+   "price": 24500000,
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "color": "black",
+   "color2": "cream",
+   "new": false
+  },
+  {
+   "id": "stone-island-kurtka-soft-shell-r",
+   "brand": "Stone Island",
+   "title": "Куртка Soft Shell-R",
+   "name": "Stone Island — Куртка Soft Shell-R",
+   "category": "top",
+   "type": "jacket",
+   "price": 6400000,
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "color": "navy",
+   "color2": "navy",
+   "new": true
+  },
+  {
+   "id": "carhartt-wip-kurtka-detroit",
+   "brand": "Carhartt WIP",
+   "title": "Куртка Detroit",
+   "name": "Carhartt WIP — Куртка Detroit",
+   "category": "top",
+   "type": "jacket",
+   "price": 2900000,
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "color": "camel",
+   "color2": "brown",
+   "new": false
+  },
+  {
+   "id": "balenciaga-dzhinsovaya-kurtka-oversize",
+   "brand": "Balenciaga",
+   "title": "Джинсовая куртка oversize",
+   "name": "Balenciaga — Джинсовая куртка oversize",
+   "category": "top",
+   "type": "jacket",
+   "price": 11900000,
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "color": "denim",
+   "color2": "denim",
+   "new": false
+  },
+  {
+   "id": "stussy-rabochaya-kurtka-canvas",
+   "brand": "Stüssy",
+   "title": "Рабочая куртка Canvas",
+   "name": "Stüssy — Рабочая куртка Canvas",
+   "category": "top",
+   "type": "jacket",
+   "price": 2600000,
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "color": "olive",
+   "color2": "olive",
+   "new": false
+  },
+  {
+   "id": "prada-bomber-re-nylon",
+   "brand": "Prada",
+   "title": "Бомбер Re-Nylon",
+   "name": "Prada — Бомбер Re-Nylon",
+   "category": "top",
+   "type": "bomber",
+   "price": 19900000,
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "color": "black",
+   "color2": "black",
+   "new": true
+  },
+  {
+   "id": "off-white-bomber-arrows",
+   "brand": "Off-White",
+   "title": "Бомбер Arrows",
+   "name": "Off-White — Бомбер Arrows",
+   "category": "top",
+   "type": "bomber",
+   "price": 9800000,
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "color": "olive",
+   "color2": "orange",
+   "new": false
+  },
+  {
+   "id": "gucci-bomber-gg",
+   "brand": "Gucci",
+   "title": "Бомбер GG",
+   "name": "Gucci — Бомбер GG",
+   "category": "top",
+   "type": "bomber",
+   "price": 21500000,
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "color": "navy",
+   "color2": "red",
+   "new": false
+  },
+  {
+   "id": "burberry-rubashka-vintage-check",
+   "brand": "Burberry",
+   "title": "Рубашка Vintage Check",
+   "name": "Burberry — Рубашка Vintage Check",
+   "category": "top",
+   "type": "shirt",
+   "price": 5900000,
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "color": "beige",
+   "color2": "red",
+   "new": false
+  },
+  {
+   "id": "ralph-lauren-rubashka-oxford",
+   "brand": "Ralph Lauren",
+   "title": "Рубашка Oxford",
+   "name": "Ralph Lauren — Рубашка Oxford",
+   "category": "top",
+   "type": "shirt",
+   "price": 1450000,
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "color": "sky",
+   "color2": "sky",
+   "new": false
+  },
+  {
+   "id": "gucci-rubashka-gg-silk",
+   "brand": "Gucci",
+   "title": "Рубашка GG Silk",
+   "name": "Gucci — Рубашка GG Silk",
+   "category": "top",
+   "type": "shirt",
+   "price": 11400000,
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "color": "cream",
+   "color2": "brown",
+   "new": true
+  },
+  {
+   "id": "stussy-rubashka-corduroy",
+   "brand": "Stüssy",
+   "title": "Рубашка Corduroy",
+   "name": "Stüssy — Рубашка Corduroy",
+   "category": "top",
+   "type": "shirt",
+   "price": 1800000,
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "color": "brown",
+   "color2": "brown",
+   "new": false
+  },
+  {
+   "id": "stussy-futbolka-8-ball",
+   "brand": "Stüssy",
+   "title": "Футболка 8 Ball",
+   "name": "Stüssy — Футболка 8 Ball",
+   "category": "top",
+   "type": "tee",
+   "price": 850000,
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "color": "black",
+   "color2": "white",
+   "new": true
+  },
+  {
+   "id": "balenciaga-futbolka-oversize-logo",
+   "brand": "Balenciaga",
+   "title": "Футболка oversize Logo",
+   "name": "Balenciaga — Футболка oversize Logo",
+   "category": "top",
+   "type": "tee",
+   "price": 6900000,
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "color": "white",
+   "color2": "black",
+   "new": false
+  },
+  {
+   "id": "gucci-futbolka-logo",
+   "brand": "Gucci",
+   "title": "Футболка Logo",
+   "name": "Gucci — Футболка Logo",
+   "category": "top",
+   "type": "tee",
+   "price": 6200000,
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "color": "cream",
+   "color2": "red",
+   "new": false
+  },
+  {
+   "id": "fear-of-god-essentials-futbolka-essentials",
+   "brand": "Fear of God Essentials",
+   "title": "Футболка Essentials",
+   "name": "Fear of God Essentials — Футболка Essentials",
+   "category": "top",
+   "type": "tee",
+   "price": 950000,
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "color": "sand",
+   "color2": "sand",
+   "new": false
+  },
+  {
+   "id": "off-white-futbolka-arrows",
+   "brand": "Off-White",
+   "title": "Футболка Arrows",
+   "name": "Off-White — Футболка Arrows",
+   "category": "top",
+   "type": "tee",
+   "price": 4200000,
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "color": "white",
+   "color2": "black",
+   "new": false
+  },
+  {
+   "id": "fear-of-god-essentials-hudi-essentials",
+   "brand": "Fear of God Essentials",
+   "title": "Худи Essentials",
+   "name": "Fear of God Essentials — Худи Essentials",
+   "category": "top",
+   "type": "hoodie",
+   "price": 1650000,
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "color": "grey",
+   "color2": "grey",
+   "new": true
+  },
+  {
+   "id": "nike-hudi-tech-fleece",
+   "brand": "Nike",
+   "title": "Худи Tech Fleece",
+   "name": "Nike — Худи Tech Fleece",
+   "category": "top",
+   "type": "hoodie",
+   "price": 1550000,
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "color": "grey",
+   "color2": "black",
+   "new": false
+  },
+  {
+   "id": "balenciaga-hudi-political-campaign",
+   "brand": "Balenciaga",
+   "title": "Худи Political Campaign",
+   "name": "Balenciaga — Худи Political Campaign",
+   "category": "top",
+   "type": "hoodie",
+   "price": 9900000,
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "color": "black",
+   "color2": "red",
+   "new": false
+  },
+  {
+   "id": "stussy-hudi-basic-logo",
+   "brand": "Stüssy",
+   "title": "Худи Basic Logo",
+   "name": "Stüssy — Худи Basic Logo",
+   "category": "top",
+   "type": "hoodie",
+   "price": 1400000,
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "color": "pink",
+   "color2": "pink",
+   "new": false
+  },
+  {
+   "id": "nike-dzhoggery-tech-fleece",
+   "brand": "Nike",
+   "title": "Джоггеры Tech Fleece",
+   "name": "Nike — Джоггеры Tech Fleece",
+   "category": "bottom",
+   "type": "joggers",
+   "price": 1250000,
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "color": "grey",
+   "color2": "black",
+   "new": true
+  },
+  {
+   "id": "fear-of-god-essentials-dzhoggery-essentials",
+   "brand": "Fear of God Essentials",
+   "title": "Джоггеры Essentials",
+   "name": "Fear of God Essentials — Джоггеры Essentials",
+   "category": "bottom",
+   "type": "joggers",
+   "price": 1350000,
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "color": "sand",
+   "color2": "sand",
+   "new": false
+  },
+  {
+   "id": "balenciaga-dzhinsy-baggy",
+   "brand": "Balenciaga",
+   "title": "Джинсы Baggy",
+   "name": "Balenciaga — Джинсы Baggy",
+   "category": "bottom",
+   "type": "jeans",
+   "price": 9400000,
+   "sizes": [
+    "28",
+    "30",
+    "32",
+    "34",
+    "36"
+   ],
+   "color": "denim",
+   "color2": "denim",
+   "new": true
+  },
+  {
+   "id": "gucci-dzhinsy-s-vyshivkoy",
+   "brand": "Gucci",
+   "title": "Джинсы с вышивкой",
+   "name": "Gucci — Джинсы с вышивкой",
+   "category": "bottom",
+   "type": "jeans",
+   "price": 8900000,
+   "sizes": [
+    "28",
+    "30",
+    "32",
+    "34",
+    "36"
+   ],
+   "color": "denim",
+   "color2": "red",
+   "new": false
+  },
+  {
+   "id": "acne-studios-dzhinsy-1991-toj",
+   "brand": "Acne Studios",
+   "title": "Джинсы 1991 Toj",
+   "name": "Acne Studios — Джинсы 1991 Toj",
+   "category": "bottom",
+   "type": "jeans",
+   "price": 3900000,
+   "sizes": [
+    "28",
+    "30",
+    "32",
+    "34",
+    "36"
+   ],
+   "color": "black",
+   "color2": "black",
+   "new": false
+  },
+  {
+   "id": "carhartt-wip-bryuki-single-knee",
+   "brand": "Carhartt WIP",
+   "title": "Брюки Single Knee",
+   "name": "Carhartt WIP — Брюки Single Knee",
+   "category": "bottom",
+   "type": "pants",
+   "price": 1700000,
+   "sizes": [
+    "28",
+    "30",
+    "32",
+    "34",
+    "36"
+   ],
+   "color": "camel",
+   "color2": "camel",
+   "new": false
+  },
+  {
+   "id": "stone-island-kargo-ghost",
+   "brand": "Stone Island",
+   "title": "Карго Ghost",
+   "name": "Stone Island — Карго Ghost",
+   "category": "bottom",
+   "type": "pants",
+   "price": 4800000,
+   "sizes": [
+    "28",
+    "30",
+    "32",
+    "34",
+    "36"
+   ],
+   "color": "olive",
+   "color2": "olive",
+   "new": true
+  },
+  {
+   "id": "prada-bryuki-re-nylon",
+   "brand": "Prada",
+   "title": "Брюки Re-Nylon",
+   "name": "Prada — Брюки Re-Nylon",
+   "category": "bottom",
+   "type": "pants",
+   "price": 9900000,
+   "sizes": [
+    "28",
+    "30",
+    "32",
+    "34",
+    "36"
+   ],
+   "color": "black",
+   "color2": "black",
+   "new": false
+  },
+  {
+   "id": "stussy-shorty-big-ol-jeans",
+   "brand": "Stüssy",
+   "title": "Шорты Big Ol' Jeans",
+   "name": "Stüssy — Шорты Big Ol' Jeans",
+   "category": "bottom",
+   "type": "shorts",
+   "price": 1300000,
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "color": "denim",
+   "color2": "denim",
+   "new": false
+  },
+  {
+   "id": "nike-shorty-club-fleece",
+   "brand": "Nike",
+   "title": "Шорты Club Fleece",
+   "name": "Nike — Шорты Club Fleece",
+   "category": "bottom",
+   "type": "shorts",
+   "price": 650000,
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "color": "black",
+   "color2": "white",
+   "new": false
+  },
+  {
+   "id": "nike-air-force-1-07",
+   "brand": "Nike",
+   "title": "Air Force 1 '07",
+   "name": "Nike — Air Force 1 '07",
+   "category": "shoes",
+   "type": "sneakers",
+   "price": 1500000,
+   "sizes": [
+    "40",
+    "41",
+    "42",
+    "43",
+    "44",
+    "45"
+   ],
+   "color": "white",
+   "color2": "white",
+   "new": true
+  },
+  {
+   "id": "nike-dunk-low-panda",
+   "brand": "Nike",
+   "title": "Dunk Low Panda",
+   "name": "Nike — Dunk Low Panda",
+   "category": "shoes",
+   "type": "sneakers",
+   "price": 1700000,
+   "sizes": [
+    "40",
+    "41",
+    "42",
+    "43",
+    "44",
+    "45"
+   ],
+   "color": "white",
+   "color2": "black",
+   "new": true
+  },
+  {
+   "id": "new-balance-550",
+   "brand": "New Balance",
+   "title": "550",
+   "name": "New Balance — 550",
+   "category": "shoes",
+   "type": "sneakers",
+   "price": 1900000,
+   "sizes": [
+    "40",
+    "41",
+    "42",
+    "43",
+    "44",
+    "45"
+   ],
+   "color": "white",
+   "color2": "green",
+   "new": false
+  },
+  {
+   "id": "gucci-kedy-ace",
+   "brand": "Gucci",
+   "title": "Кеды Ace",
+   "name": "Gucci — Кеды Ace",
+   "category": "shoes",
+   "type": "sneakers",
+   "price": 8900000,
+   "sizes": [
+    "40",
+    "41",
+    "42",
+    "43",
+    "44",
+    "45"
+   ],
+   "color": "white",
+   "color2": "green",
+   "new": false
+  },
+  {
+   "id": "jordan-air-jordan-1-high-chicago",
+   "brand": "Jordan",
+   "title": "Air Jordan 1 High Chicago",
+   "name": "Jordan — Air Jordan 1 High Chicago",
+   "category": "shoes",
+   "type": "hightop",
+   "price": 4900000,
+   "sizes": [
+    "40",
+    "41",
+    "42",
+    "43",
+    "44",
+    "45"
+   ],
+   "color": "white",
+   "color2": "red",
+   "new": true
+  },
+  {
+   "id": "balenciaga-triple-s",
+   "brand": "Balenciaga",
+   "title": "Triple S",
+   "name": "Balenciaga — Triple S",
+   "category": "shoes",
+   "type": "chunky",
+   "price": 12900000,
+   "sizes": [
+    "40",
+    "41",
+    "42",
+    "43",
+    "44",
+    "45"
+   ],
+   "color": "cream",
+   "color2": "grey",
+   "new": true
+  },
+  {
+   "id": "balenciaga-track",
+   "brand": "Balenciaga",
+   "title": "Track",
+   "name": "Balenciaga — Track",
+   "category": "shoes",
+   "type": "chunky",
+   "price": 11500000,
+   "sizes": [
+    "40",
+    "41",
+    "42",
+    "43",
+    "44",
+    "45"
+   ],
+   "color": "black",
+   "color2": "grey",
+   "new": false
+  },
+  {
+   "id": "gucci-lofery-horsebit",
+   "brand": "Gucci",
+   "title": "Лоферы Horsebit",
+   "name": "Gucci — Лоферы Horsebit",
+   "category": "shoes",
+   "type": "loafers",
+   "price": 11900000,
+   "sizes": [
+    "40",
+    "41",
+    "42",
+    "43",
+    "44",
+    "45"
+   ],
+   "color": "black",
+   "color2": "gold",
+   "new": true
+  },
+  {
+   "id": "prada-lofery-monolith",
+   "brand": "Prada",
+   "title": "Лоферы Monolith",
+   "name": "Prada — Лоферы Monolith",
+   "category": "shoes",
+   "type": "loafers",
+   "price": 13900000,
+   "sizes": [
+    "40",
+    "41",
+    "42",
+    "43",
+    "44",
+    "45"
+   ],
+   "color": "black",
+   "color2": "black",
+   "new": false
+  },
+  {
+   "id": "timberland-botinki-6-inch-premium",
+   "brand": "Timberland",
+   "title": "Ботинки 6-Inch Premium",
+   "name": "Timberland — Ботинки 6-Inch Premium",
+   "category": "shoes",
+   "type": "boots",
+   "price": 2600000,
+   "sizes": [
+    "40",
+    "41",
+    "42",
+    "43",
+    "44",
+    "45"
+   ],
+   "color": "camel",
+   "color2": "brown",
+   "new": false
+  },
+  {
+   "id": "moncler-botinki-trailgrip",
+   "brand": "Moncler",
+   "title": "Ботинки Trailgrip",
+   "name": "Moncler — Ботинки Trailgrip",
+   "category": "shoes",
+   "type": "boots",
+   "price": 8400000,
+   "sizes": [
+    "40",
+    "41",
+    "42",
+    "43",
+    "44",
+    "45"
+   ],
+   "color": "black",
+   "color2": "grey",
+   "new": false
+  },
+  {
+   "id": "gucci-remen-gg-marmont",
+   "brand": "Gucci",
+   "title": "Ремень GG Marmont",
+   "name": "Gucci — Ремень GG Marmont",
+   "category": "acc",
+   "type": "belt",
+   "price": 5400000,
+   "sizes": [
+    "ONE SIZE"
+   ],
+   "color": "black",
+   "color2": "gold",
+   "new": false
+  },
+  {
+   "id": "stussy-kepka-stock-low-pro",
+   "brand": "Stüssy",
+   "title": "Кепка Stock Low Pro",
+   "name": "Stüssy — Кепка Stock Low Pro",
+   "category": "acc",
+   "type": "cap",
+   "price": 650000,
+   "sizes": [
+    "ONE SIZE"
+   ],
+   "color": "black",
+   "color2": "white",
+   "new": false
+  },
+  {
+   "id": "balenciaga-kepka-logo",
+   "brand": "Balenciaga",
+   "title": "Кепка Logo",
+   "name": "Balenciaga — Кепка Logo",
+   "category": "acc",
+   "type": "cap",
+   "price": 4400000,
+   "sizes": [
+    "ONE SIZE"
+   ],
+   "color": "black",
+   "color2": "white",
+   "new": true
+  },
+  {
+   "id": "prada-sumka-re-edition-2005",
+   "brand": "Prada",
+   "title": "Сумка Re-Edition 2005",
+   "name": "Prada — Сумка Re-Edition 2005",
+   "category": "acc",
+   "type": "bag",
+   "price": 22900000,
+   "sizes": [
+    "ONE SIZE"
+   ],
+   "color": "black",
+   "color2": "black",
+   "new": false
+  }
+ ]
 }

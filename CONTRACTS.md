@@ -16,49 +16,30 @@
 
 Чужие файлы не править — пиши владельцу через SendMessage. Статус — в `.team/<имя>.md`.
 
-## Дизайн-система (Hallmark, custom)
-- Тон: люкс, тёмный. Макроструктура: Feature Stack + горизонтальный пин-трек. Nav N5 (floating pill), Footer Ft5 (statement).
-- Цвета ТОЛЬКО токенами из `tokens.css` (OKLCH):
-  `--color-paper` oklch(14% 0.012 40) тёплый чёрный · `--color-paper-2` oklch(18% 0.014 40) · `--color-paper-3` oklch(23% 0.016 40)
-  `--color-ink` oklch(94% 0.014 80) кость · `--color-muted` oklch(70% 0.014 70) · `--color-rule` oklch(94% 0.014 80 / 0.12)
-  `--color-accent` oklch(62% 0.19 22) гранат · `--color-accent-2` oklch(80% 0.12 80) шафран/золото · `--color-focus` = accent-2
-  Ткани: `--silk-1` oklch(58% 0.2 22), `--silk-2` oklch(78% 0.13 80), `--silk-3` oklch(42% 0.12 265), `--silk-4` oklch(55% 0.11 160)
-- Шрифты (Google Fonts): `--font-display` "Playfair Display" (кириллица есть; только roman, без italic), `--font-body` "Manrope", `--font-mono` "JetBrains Mono".
-- Easing: `--ease-out` cubic-bezier(.16,1,.3,1), `--ease-in` cubic-bezier(.7,0,.84,0), `--ease-in-out` cubic-bezier(.65,0,.35,1).
-- Длительности: `--dur-fast` 160ms, `--dur-base` 320ms, `--dur-slow` 900ms. Шаг отступов 4pt: `--space-1..--space-12` (4,8,12,16,24,32,48,64,96,128,160,224 px).
-- Анимируем только `transform` и `opacity`. Обязателен `prefers-reduced-motion`.
+## Дизайн-система (с 2026-10-12, редизайн v2)
+- Мультибрендовый магазин (Moncler, Gucci, Nike, Balenciaga, Stüssy, Prada…), светлый, стритвир-люкс.
+- 4 страницы: `index.html` (hero + поиск + разделы + новое), `catalog.html` (?cat=top|bottom|shoes|acc &type= &brand= &q= &sort=asc|desc), `product.html?id=`, `cart.html`.
+- Токены в `web/css/tokens.css` (OKLCH, `--g-*` — цвета вещей), стили в `web/css/site.css`. Шрифты: Unbounded / Manrope / JetBrains Mono.
+- JS: `web/js/core.js` (данные, поиск, корзина `cf-cart-v2`, тосты) + по файлу на страницу. Без WebGL и библиотек.
+- Анимируем только `transform`/`opacity`, переходы между страницами — View Transitions. Обязателен `prefers-reduced-motion`.
 
-## 1. Товары — `web/data/products.json` (владелец apple-18)
+## 1. Товары — `web/data/products.json`
 ```json
 { "currency": "UZS", "telegram": "shxawenya",
-  "products": [ { "id": "atlas-chapan", "name": "Чапан «Атлас»", "category": "outerwear",
-    "price": 2450000, "fabric": "маргиланский атлас, 100% шёлк", "sizes": ["S","M","L","XL"],
-    "silk": "--silk-1", "svg": "assets/garments/atlas-chapan.svg", "note": "одна строка о вещи" } ] }
+  "products": [ { "id": "moncler-puhovik-maya", "brand": "Moncler", "title": "Пуховик Maya",
+    "name": "Moncler — Пуховик Maya", "category": "top", "type": "puffer", "price": 14900000,
+    "sizes": ["S","M","L","XL","XXL"], "color": "black", "color2": "black", "new": true,
+    "photo": "assets/photos/moncler-maya.jpg" } ] }
 ```
-- 6 вещей, `id` — латиница-kebab. `price` — целое в сумах (ЗАГЛУШКИ, пользователь заменит).
-- `category` ∈ outerwear | shirts | dresses | trousers | accessories.
+- `category` ∈ top | bottom | shoes | acc. `type` = id силуэта в `assets/items.svg`:
+  puffer sheepskin jacket bomber shirt tee hoodie · jeans pants joggers shorts · sneakers hightop chunky loafers boots · cap bag belt.
+- `color`/`color2` — имя токена `--g-<имя>`. `photo` — необязательно: если есть, показывается фото вместо силуэта.
+- `price` — целое в сумах (ЗАГЛУШКИ). Сервер читает только id, name, price, sizes.
 
-## 2. SVG одежды — `web/assets/garments/<id>.svg` (владелец apple-18)
-- `viewBox="0 0 400 560"`, без width/height, без `<script>`, без внешних ссылок, < 12 КБ каждый.
-- Цвет ткани через `fill="currentColor"` (фронт ставит `color: var(--silk-N)`), тени/складки — чёрный/белый с opacity.
-- Обязательные группы с id для анимации: `g#body`, `g#sleeve-l`, `g#sleeve-r` (у брюк/шарфа — `g#leg-l`/`g#leg-r` или `g#tail`), `g#hem` (низ, качается).
-  Фронт инлайнит SVG и вращает эти группы (`transform-box: fill-box`), так что точка крепления рукава — верх группы.
+## 2. Силуэты — `web/assets/items.svg`
+Спрайт `<symbol id="<type>" viewBox="0 0 200 200">`, основной цвет `currentColor`, второй — CSS-переменная `--c2`. Классы внутри с префиксом `z`. Вставляется в страницу целиком (core.js).
 
-## 3. Ткань — `web/assets/cloth.bin` (генерирует `sim/` apple-a2)
-Little-endian:
-```
-0  char[4] "CFCL"
-4  u16 version = 1
-6  u16 cols   (≈ 32)
-8  u16 rows   (≈ 20)
-10 u16 frames (≈ 120, бесшовная петля)
-12 u16 fps    (30; фронт интерполирует до 60+)
-14 u16 reserved = 0
-16 int16 data[frames][rows][cols][3]   // x,y,z в [-32767..32767] → нормированные координаты [-1..1]; x вправо, y вниз, z к зрителю
-```
-**v2** (version = 2): тот же заголовок; кадр 0 — абсолютные значения, кадры 1..N-1 — int16-дельты к предыдущему кадру с переполнением по модулю 2^16 (wrap). Фронт понимает v1 и v2.
-
-Полотно висит на верхней кромке (закреплено), ветер периодичный с периодом = длина петли.
+## 3. Ткань (`sim/`, cloth.bin) — больше не используется сайтом, из `make all` убрана.
 
 ## 4. HTTP API — сервер на C++ (владелец apple-a2), порт по умолчанию **8090**
 - `GET /*` — статика из `web/`. Если есть `файл.gz` и клиент шлёт `Accept-Encoding: gzip` — отдать его. `ETag` + `304`, `Cache-Control: public, max-age=31536000, immutable` для `assets/`, `no-cache` для html/json.
@@ -77,3 +58,4 @@ Little-endian:
 - 2026-10-12 apple-54: создан контракт.
 - 2026-10-12 apple-54: шрифт Bodoni Moda → Playfair Display (у Bodoni нет кириллицы); cloth.bin хранит x,y,z (3 int16 на точку) — для честного освещения шёлка в WebGL.
 - 2026-10-12 apple-54: добавлен cloth.bin v2 (дельты между кадрами, предложение apple-a2) — меньше в gzip.
+- 2026-10-12: редизайн v2 — мультибрендовый магазин на 4 страницы, WebGL-ткань и атлас убраны (лагало). Сайт 118 КБ / 34 КБ gzip.

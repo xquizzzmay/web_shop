@@ -11,7 +11,7 @@ SERVER := bin/fergana-server
 
 .PHONY: all gzip run test bench clean distclean
 
-all: $(CLOTH) $(SERVER) gzip
+all: $(SERVER) gzip
 
 bin/cloth: sim/cloth.c | bin
 	$(CC) $(CFLAGS) -o $@ $< -lm

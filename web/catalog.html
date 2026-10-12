@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Каталог — Claude Fergana</title>
+<meta name="description" content="Брендовая одежда и обувь: пуховики, дублёнки, куртки, худи, джинсы, кроссовки.">
+<meta name="theme-color" content="#f6f4f0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="data/products.json" as="fetch" crossorigin>
+<link rel="preload" href="assets/items.svg" as="fetch" crossorigin>
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23201c18'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23e0442b'/%3E%3C/svg%3E">
+<script type="module" src="js/catalog.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">К содержимому</a>
+<header class="bar">
+  <div class="wrap bar__in">
+    <a class="logo" href="index.html"><span class="logo__dot" aria-hidden="true"></span>CLAUDE FERGANA</a>
+    <nav class="bar__nav" aria-label="Разделы"><a href="index.html">Главная</a><a href="catalog.html" aria-current="page">Каталог</a><a href="catalog.html?cat=top">Верх</a><a href="catalog.html?cat=bottom">Низ</a><a href="catalog.html?cat=shoes">Обувь</a></nav>
+    <div class="bar__tools">
+      <button class="searchbtn" type="button" data-search aria-label="Поиск"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span>Поиск</span><kbd>/</kbd></button>
+      <a class="cartbtn" href="cart.html" data-cart-link><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>Корзина <span class="count" data-count hidden>0</span></a>
+    </div>
+  </div>
+</header>
+<nav class="tabs" aria-label="Меню">
+  <a href="index.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11 12 4l9 7v9H3z"/><path d="M9 20v-6h6v6"/></svg>Главная</a>
+  <a href="catalog.html" aria-current="page"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg>Каталог</a>
+  <button type="button" data-search><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Поиск</button>
+  <a href="cart.html" data-cart-link><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>Корзина<span class="count" data-count hidden>0</span></a>
+</nav>
+<main id="main">
+<div class="wrap">
+  <div class="cat-head"><h1 data-title>Каталог</h1><p data-found></p></div>
+  <div class="filters">
+    <div class="filters__row">
+      <div class="seg" role="tablist" aria-label="Раздел" data-seg>
+        <span class="seg__ind" aria-hidden="true"></span>
+        <button role="tab" data-cat="">Всё</button>
+        <button role="tab" data-cat="top">Верх</button>
+        <button role="tab" data-cat="bottom">Низ</button>
+        <button role="tab" data-cat="shoes">Обувь</button>
+        <button role="tab" data-cat="acc">Аксессуары</button>
+      </div>
+      <div class="filters__tools">
+        <label class="mini-search"><span class="sr">Поиск в каталоге</span>
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input type="search" placeholder="Название или бренд" data-q autocomplete="off" enterkeyhint="search"></label>
+        <label><span class="sr">Бренд</span><select class="select" data-brand><option value="">Все бренды</option></select></label>
+        <label><span class="sr">Сортировка</span><select class="select" data-sort>
+          <option value="">Сначала новое</option><option value="asc">Дешевле</option><option value="desc">Дороже</option></select></label>
+      </div>
+    </div>
+    <div class="types" data-types></div>
+  </div>
+  <div class="grid" data-grid></div>
+  <div class="empty" data-empty hidden><h2>Ничего не нашлось</h2><p>Сбрось фильтры или поищи по-другому.</p><button class="btn btn--ghost" type="button" data-reset>Сбросить фильтры</button></div>
+</div>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot__big">Заказ — в Telegram <a href="https://t.me/shxawenya" target="_blank" rel="noopener">@shxawenya</a></p>
+    <div class="foot__row">
+      <nav aria-label="Низ страницы"><a href="catalog.html?cat=top">Верх</a><a href="catalog.html?cat=bottom">Низ</a><a href="catalog.html?cat=shoes">Обувь</a><a href="catalog.html?cat=acc">Аксессуары</a><a href="cart.html">Корзина</a></nav>
+      <p class="muted">Цены в сумах · Claude Fergana, Фергана</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
