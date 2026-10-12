@@ -1,0 +1,225 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+<!-- Силуэты вещей. Основной цвет — currentColor, второй — переменная c2. viewBox 0 0 200 200. -->
+<defs>
+  <style>
+    .zo{stroke:#000;stroke-opacity:.14;stroke-width:1.2;stroke-linejoin:round}
+    .zs{fill:#000;opacity:.16}
+    .zh{fill:#fff;opacity:.10}
+    .zl{fill:none;stroke:#000;stroke-opacity:.22;stroke-width:1.6;stroke-linecap:round}
+    .zc{fill:var(--c2,#fff)}
+    .zcs{fill:none;stroke:var(--c2,#fff);stroke-width:2;stroke-linecap:round}
+    .zg{fill:#000;opacity:.07}
+    .zsole{fill:#f3f1ec}
+  </style>
+</defs>
+
+<symbol id="puffer" viewBox="0 0 200 200">
+  <ellipse class="zg" cx="100" cy="190" rx="70" ry="5"/>
+  <path class="zo" fill="currentColor" d="M68 34Q100 26 132 34L158 48Q174 58 176 80L182 158Q172 168 158 165L152 96L148 178Q100 190 52 178L48 96L42 165Q28 168 18 158L24 80Q26 58 42 48Z"/>
+  <path class="zs" d="M100 40L148 178Q124 184 100 185Z"/>
+  <path class="zh" d="M52 70Q60 60 72 58L66 176Q58 175 52 174Z"/>
+  <path class="zl" d="M50 72Q100 80 150 72M49 98Q100 106 151 98M49 124Q100 132 151 124M49 150Q100 158 151 150M26 92Q36 96 47 92M24 118Q35 122 47 118M22 144Q33 148 45 144M153 92Q164 96 174 92M153 118Q165 122 176 118M155 144Q167 148 178 144"/>
+  <path class="zo" fill="currentColor" d="M72 36Q100 48 128 36L126 20Q100 12 74 20Z"/>
+  <path class="zl" d="M100 40V182"/>
+  <path class="zcs" d="M100 46V60" opacity=".7"/>
+</symbol>
+
+<symbol id="sheepskin" viewBox="0 0 200 200">
+  <ellipse class="zg" cx="100" cy="190" rx="70" ry="5"/>
+  <path class="zo" fill="currentColor" d="M66 36Q100 30 134 36L156 46Q168 54 170 74L178 160Q170 168 156 166L150 96L148 180Q100 188 52 180L50 96L44 166Q30 168 22 160L30 74Q32 54 44 46Z"/>
+  <path class="zs" d="M100 104L148 180Q124 186 100 186Z"/>
+  <path class="zc zo" d="M64 34L100 104L136 34L152 44L120 116L100 106L80 116L48 44Z"/>
+  <path class="zc zo" d="M100 106L104 184L96 184Z"/>
+  <path class="zc zo" d="M52 172Q100 182 148 172L148 182Q100 192 52 182Z"/>
+  <path class="zc zo" d="M22 152Q34 160 45 158L44 168Q30 170 21 162Z"/>
+  <path class="zc zo" d="M178 152Q166 160 155 158L156 168Q170 170 179 162Z"/>
+  <path class="zl" d="M66 130H86M114 130H134"/>
+</symbol>
+
+<symbol id="jacket" viewBox="0 0 200 200">
+  <ellipse class="zg" cx="100" cy="190" rx="68" ry="5"/>
+  <path class="zo" fill="currentColor" d="M70 34Q100 28 130 34L154 44Q166 52 168 72L176 160Q168 168 154 166L148 94L146 178Q100 186 54 178L52 94L46 166Q32 168 24 160L32 72Q34 52 46 44Z"/>
+  <path class="zs" d="M100 46L146 178Q122 183 100 184Z"/>
+  <path class="zo" fill="currentColor" d="M70 34L86 62L100 46L114 62L130 34L124 26Q100 20 76 26Z"/>
+  <path class="zs" d="M86 62L100 46L100 56Z"/>
+  <path class="zl" d="M100 48V182M64 78H88V96H64ZM112 78H136V96H112ZM54 168Q100 176 146 168M30 150H46M154 150H170"/>
+  <circle class="zc" cx="104" cy="70" r="2.4"/><circle class="zc" cx="104" cy="100" r="2.4"/><circle class="zc" cx="104" cy="130" r="2.4"/><circle class="zc" cx="104" cy="160" r="2.4"/>
+</symbol>
+
+<symbol id="bomber" viewBox="0 0 200 200">
+  <ellipse class="zg" cx="100" cy="190" rx="70" ry="5"/>
+  <path class="zo" fill="currentColor" d="M72 36Q100 30 128 36L156 48Q170 58 172 80L178 152Q168 160 156 158L150 96L150 166Q100 180 50 166L50 96L44 158Q32 160 22 152L28 80Q30 58 44 48Z"/>
+  <path class="zs" d="M100 40L150 166Q126 174 100 175Z"/>
+  <path class="zh" d="M54 66Q62 58 72 56L68 170Q60 168 54 167Z"/>
+  <path class="zc zo" d="M72 36Q100 50 128 36L126 26Q100 36 74 26Z"/>
+  <path class="zc zo" d="M50 166Q100 180 150 166L150 180Q100 192 50 180Z"/>
+  <path class="zc zo" d="M22 152Q34 160 44 158L44 168Q32 170 22 164Z"/>
+  <path class="zc zo" d="M178 152Q166 160 156 158L156 168Q168 170 178 164Z"/>
+  <path class="zl" d="M100 44V186M58 110Q66 118 76 116M142 110Q134 118 124 116M156 64L162 74"/>
+  <rect class="zc" x="150" y="70" width="10" height="5" rx="1" transform="rotate(20 155 72)" opacity=".8"/>
+</symbol>
+
+<symbol id="shirt" viewBox="0 0 200 200">
+  <ellipse class="zg" cx="100" cy="190" rx="64" ry="5"/>
+  <path class="zo" fill="currentColor" d="M74 34Q100 30 126 34L152 44Q164 50 166 70L174 158Q166 166 154 164L146 92L146 180Q100 188 54 180L54 92L46 164Q34 166 26 158L34 70Q36 50 48 44Z"/>
+  <path class="zs" d="M100 44L146 180Q124 185 100 186Z"/>
+  <g opacity=".45"><path class="zcs" d="M70 40V182M86 36V184M114 36V184M130 40V182M56 70H144M54 100H146M54 130H146M54 160H146" stroke-width="1.3"/></g>
+  <path class="zo" fill="currentColor" d="M74 34L88 56L100 42L112 56L126 34L120 24Q100 20 80 24Z"/>
+  <path class="zs" d="M88 56L100 42V52Z"/>
+  <path class="zl" d="M100 44V184M110 76H130V96H110ZM30 148Q38 152 46 150M170 148Q162 152 154 150"/>
+  <circle fill="#fff" opacity=".7" cx="100" cy="64" r="1.8"/><circle fill="#fff" opacity=".7" cx="100" cy="88" r="1.8"/><circle fill="#fff" opacity=".7" cx="100" cy="112" r="1.8"/><circle fill="#fff" opacity=".7" cx="100" cy="136" r="1.8"/><circle fill="#fff" opacity=".7" cx="100" cy="160" r="1.8"/>
+</symbol>
+
+<symbol id="tee" viewBox="0 0 200 200">
+  <ellipse class="zg" cx="100" cy="186" rx="62" ry="5"/>
+  <path class="zo" fill="currentColor" d="M76 34Q100 44 124 34L160 50L182 94L154 106L146 90L148 176Q100 184 52 176L54 90L46 106L18 94L40 50Z"/>
+  <path class="zs" d="M118 38L160 50L182 94L154 106L146 90L148 176Q124 181 108 181Z"/>
+  <path class="zo" fill="currentColor" d="M76 34Q100 46 124 34L120 30Q100 40 80 30Z"/>
+  <path class="zl" d="M78 36Q100 50 122 36M48 102L58 98M152 102L142 98"/>
+  <circle class="zc" cx="100" cy="88" r="14"/>
+  <circle fill="currentColor" cx="100" cy="88" r="6"/>
+  <rect class="zc" x="80" y="108" width="40" height="5" rx="2"/>
+</symbol>
+
+<symbol id="hoodie" viewBox="0 0 200 200">
+  <ellipse class="zg" cx="100" cy="190" rx="68" ry="5"/>
+  <path class="zo" fill="currentColor" d="M66 42Q100 34 134 42L156 52Q168 60 170 80L178 158Q168 166 156 164L150 100L148 170Q100 180 52 170L50 100L44 164Q32 166 22 158L30 80Q32 60 44 52Z"/>
+  <path class="zs" d="M100 50L148 170Q124 176 100 176Z"/>
+  <path class="zo" fill="currentColor" d="M68 46Q66 14 100 12Q134 14 132 46Q118 60 100 60Q82 60 68 46Z"/>
+  <path class="zs" d="M80 44Q82 26 100 24Q118 26 120 44Q110 54 100 54Q90 54 80 44Z" opacity=".35"/>
+  <path class="zo" fill="currentColor" d="M52 168Q100 178 148 168V180Q100 190 52 180Z"/>
+  <path class="zl" d="M70 124H130L140 160H60ZM60 160Q100 168 140 160"/>
+  <path class="zcs" d="M92 58V84M108 58V84"/>
+  <path class="zl" d="M24 150Q34 156 44 154M176 150Q166 156 156 154"/>
+</symbol>
+
+<symbol id="jeans" viewBox="0 0 200 200">
+  <ellipse class="zg" cx="100" cy="190" rx="66" ry="5"/>
+  <path class="zo" fill="currentColor" d="M56 16H144L158 182H112L102 72H98L88 182H42Z"/>
+  <path class="zs" d="M100 70L112 182H128L122 70Z"/>
+  <path class="zh" d="M58 30L48 180H58L68 32Z"/>
+  <path class="zl" d="M56 28H144M100 28V70M100 58Q92 60 90 50M60 30Q72 50 88 34M140 30Q128 50 112 34"/>
+  <g opacity=".6"><path class="zcs" d="M44 176H86M114 176H156" stroke-width="1.2"/></g>
+  <circle class="zc" cx="100" cy="22" r="2.6"/>
+</symbol>
+
+<symbol id="pants" viewBox="0 0 200 200">
+  <ellipse class="zg" cx="100" cy="190" rx="60" ry="5"/>
+  <path class="zo" fill="currentColor" d="M60 16H140L150 182H110L102 70H98L90 182H50Z"/>
+  <path class="zs" d="M100 68L110 182H124L118 68Z"/>
+  <path class="zl" d="M60 28H140M100 28V68M54 120H92M108 120H146M58 104H88V136H58ZM112 104H142V136H112Z"/>
+  <path class="zs" d="M54 104H90L88 136H54Z" opacity=".1"/>
+  <path class="zs" d="M110 104H146L146 136H112Z" opacity=".1"/>
+</symbol>
+
+<symbol id="joggers" viewBox="0 0 200 200">
+  <ellipse class="zg" cx="100" cy="190" rx="56" ry="5"/>
+  <path class="zo" fill="currentColor" d="M58 18H142L146 70L136 168H108L102 72H98L92 168H64L54 70Z"/>
+  <path class="zs" d="M100 70L108 168H120L116 70Z"/>
+  <path class="zo" fill="currentColor" d="M64 166H92V182H66ZM108 166H136L134 182H108Z"/>
+  <path class="zl" d="M58 30H142M100 30V70M64 172H92M108 172H136M60 36Q70 54 84 38M140 36Q130 54 116 38"/>
+  <path class="zcs" d="M94 32Q92 46 88 52M106 32Q108 46 112 52"/>
+  <path class="zc" d="M118 96L130 92L132 100L120 104Z" opacity=".75"/>
+</symbol>
+
+<symbol id="shorts" viewBox="0 0 200 200">
+  <ellipse class="zg" cx="100" cy="166" rx="68" ry="5"/>
+  <path class="zo" fill="currentColor" d="M52 40H148L164 150H110L100 92L90 150H36Z"/>
+  <path class="zs" d="M100 90L110 150H130L120 90Z"/>
+  <path class="zl" d="M52 54H148M100 54V92M56 56Q70 74 86 58M144 56Q130 74 114 58M38 140H90M110 140H162"/>
+  <circle class="zc" cx="100" cy="47" r="2.6"/>
+</symbol>
+
+<symbol id="sneakers" viewBox="0 0 200 200">
+  <ellipse class="zg" cx="100" cy="150" rx="86" ry="5"/>
+  <path class="zo" fill="currentColor" d="M22 128Q20 104 32 98L62 92Q78 72 98 66L110 64Q118 80 132 86Q160 94 174 108Q182 116 180 128Z"/>
+  <path class="zs" d="M110 64Q118 80 132 86Q160 94 174 108Q182 116 180 128H150Q148 100 112 78Z"/>
+  <path class="zc zo" d="M40 122Q70 116 92 100Q112 88 138 96Q120 100 104 112Q86 124 60 128Z"/>
+  <path class="zc zo" d="M24 112Q30 98 48 96L52 118Q36 120 24 122Z" opacity=".9"/>
+  <path class="zl" d="M74 86L96 98M80 80L102 92M86 74L108 86"/>
+  <path class="zsole zo" d="M18 126H182Q184 138 176 142H26Q16 140 18 126Z"/>
+  <path class="zl" d="M22 134H180"/>
+</symbol>
+
+<symbol id="hightop" viewBox="0 0 200 200">
+  <ellipse class="zg" cx="100" cy="166" rx="84" ry="5"/>
+  <path class="zo" fill="currentColor" d="M24 144Q22 120 34 114L60 110L62 46Q84 38 106 44L108 82Q120 98 136 102Q164 110 176 124Q182 132 180 144Z"/>
+  <path class="zs" d="M106 44L108 82Q120 98 136 102Q164 110 176 124Q182 132 180 144H150Q146 112 112 96Z"/>
+  <path class="zc zo" d="M62 46Q84 38 106 44L108 66Q84 60 62 66Z"/>
+  <path class="zc zo" d="M24 128Q28 114 46 112L60 110L62 140H24Z"/>
+  <path class="zc zo" d="M118 92Q150 104 176 124L180 140Q150 132 120 112Z"/>
+  <path class="zh" d="M70 80Q90 76 104 80L104 96Q90 92 70 96Z" opacity=".4"/>
+  <path class="zl" d="M84 66L104 76M84 76L104 86M84 86L104 96M84 96L102 106"/>
+  <path class="zsole zo" d="M20 142H182Q184 154 176 158H28Q18 156 20 142Z"/>
+</symbol>
+
+<symbol id="chunky" viewBox="0 0 200 200">
+  <ellipse class="zg" cx="100" cy="160" rx="88" ry="6"/>
+  <path class="zo" fill="currentColor" d="M22 114Q22 92 36 86L62 82Q76 60 96 56L110 56Q118 72 132 78Q160 86 174 98Q182 106 180 114Z"/>
+  <path class="zs" d="M110 56Q118 72 132 78Q160 86 174 98Q182 106 180 114H148Q146 88 112 70Z"/>
+  <path class="zc zo" d="M36 104Q58 92 80 96Q100 80 128 84Q150 90 160 104Q130 98 108 106Q80 112 52 110Z" opacity=".85"/>
+  <path class="zh" d="M44 92Q60 86 72 88L66 98Q54 98 44 100Z" opacity=".5"/>
+  <path class="zl" d="M74 76L94 86M80 70L100 80M86 64L106 74"/>
+  <path class="zc zo" d="M16 112H184Q188 124 182 128H18Q12 124 16 112Z"/>
+  <path class="zsole zo" d="M14 126H186Q188 140 180 146H22Q12 142 14 126Z"/>
+  <path class="zc" d="M18 136H184V140H18Z" opacity=".5"/>
+  <path class="zl" d="M24 120H178M30 140V146M60 138V146M90 140V146M120 140V146M150 138V146"/>
+</symbol>
+
+<symbol id="loafers" viewBox="0 0 200 200">
+  <ellipse class="zg" cx="100" cy="146" rx="84" ry="5"/>
+  <path class="zo" fill="currentColor" d="M22 132Q18 108 34 100L58 98Q66 90 88 90L120 92Q150 96 170 112Q182 122 178 134Z"/>
+  <path class="zs" d="M120 92Q150 96 170 112Q182 122 178 134H142Q136 108 112 98Z"/>
+  <path class="zh" d="M40 104Q60 100 80 100L76 110Q58 110 40 112Z" opacity=".5"/>
+  <path class="zl" d="M60 100Q90 116 132 100M66 98Q96 86 128 98"/>
+  <path class="zc zo" d="M86 104H120V110H86Z" rx="2"/>
+  <circle class="zc zo" cx="84" cy="107" r="5"/><circle class="zc zo" cx="122" cy="107" r="5"/>
+  <circle fill="currentColor" cx="84" cy="107" r="2.2"/><circle fill="currentColor" cx="122" cy="107" r="2.2"/>
+  <path class="zo" fill="currentColor" d="M20 130H180Q182 138 176 140H26Q18 140 20 130Z"/>
+  <path class="zs" d="M20 130H180Q182 138 176 140H26Q18 140 20 130Z" opacity=".35"/>
+</symbol>
+
+<symbol id="boots" viewBox="0 0 200 200">
+  <ellipse class="zg" cx="104" cy="178" rx="78" ry="5"/>
+  <path class="zo" fill="currentColor" d="M50 160L52 40Q78 30 108 36L110 94Q126 108 148 112Q172 118 178 140Q180 150 178 160Z"/>
+  <path class="zs" d="M108 36L110 94Q126 108 148 112Q172 118 178 140Q180 150 178 160H144Q142 120 118 104Z"/>
+  <path class="zc zo" d="M52 40Q78 30 108 36L108 50Q78 44 52 54Z" opacity=".9"/>
+  <path class="zh" d="M58 60Q66 58 72 60L70 150Q62 150 58 150Z" opacity=".5"/>
+  <path class="zl" d="M84 56L106 60M84 70L106 74M84 84L108 88M86 98L114 104M90 110L124 114M84 56L106 74M84 70L108 88M86 84L112 102"/>
+  <path class="zo" fill="#2a2420" d="M46 158H182Q186 172 178 176H52Q44 172 46 158Z"/>
+  <path class="zc" d="M48 160H182V164H48Z" opacity=".55"/>
+</symbol>
+
+<symbol id="cap" viewBox="0 0 200 200">
+  <ellipse class="zg" cx="104" cy="150" rx="80" ry="6"/>
+  <path class="zo" fill="currentColor" d="M38 124Q34 64 100 56Q160 58 162 118Z"/>
+  <path class="zs" d="M100 56Q160 58 162 118L130 122Q134 76 100 56Z"/>
+  <path class="zh" d="M52 110Q56 78 84 66L80 116Z" opacity=".6"/>
+  <path class="zo" fill="currentColor" d="M110 116Q160 108 188 128Q190 138 176 140Q140 132 108 134Z"/>
+  <path class="zs" d="M110 116Q160 108 188 128Q190 138 176 140Q140 132 108 134Z" opacity=".25"/>
+  <path class="zl" d="M100 56Q92 84 96 120M100 56Q120 80 124 118M38 124Q90 114 162 118"/>
+  <circle fill="currentColor" class="zo" cx="100" cy="56" r="4"/>
+  <rect class="zc" x="66" y="88" width="30" height="8" rx="2"/>
+</symbol>
+
+<symbol id="bag" viewBox="0 0 200 200">
+  <ellipse class="zg" cx="100" cy="168" rx="72" ry="5"/>
+  <path class="zcs" d="M48 104Q50 20 100 18Q150 20 152 104" stroke="currentColor" stroke-width="4" style="stroke:currentColor"/>
+  <path class="zo" fill="currentColor" d="M34 104Q32 88 50 86H150Q168 88 166 104L160 156Q158 164 148 164H52Q42 164 40 156Z"/>
+  <path class="zs" d="M120 86H150Q168 88 166 104L160 156Q158 164 148 164H128Q138 120 120 86Z"/>
+  <path class="zh" d="M44 100Q46 92 56 92L54 156Q46 156 44 150Z" opacity=".5"/>
+  <path class="zl" d="M38 104H162M100 86V104"/>
+  <path class="zc zo" d="M86 114H114L100 136Z"/>
+</symbol>
+
+<symbol id="belt" viewBox="0 0 200 200">
+  <ellipse class="zg" cx="100" cy="160" rx="80" ry="5"/>
+  <path class="zo" fill="currentColor" d="M20 96Q100 76 180 96V118Q100 98 20 118Z"/>
+  <path class="zs" d="M100 86Q140 88 180 96V118Q140 108 100 106Z"/>
+  <path class="zl" d="M24 100Q100 82 176 100M24 114Q100 96 176 114"/>
+  <circle class="zcs" cx="88" cy="106" r="16" stroke-width="5"/>
+  <circle class="zcs" cx="112" cy="106" r="16" stroke-width="5"/>
+  <path class="zo" fill="currentColor" d="M30 150Q100 128 170 150L168 160Q100 140 32 160Z" opacity=".6"/>
+  <circle fill="#000" opacity=".25" cx="150" cy="99" r="2"/><circle fill="#000" opacity=".25" cx="162" cy="101" r="2"/>
+</symbol>
+</svg>

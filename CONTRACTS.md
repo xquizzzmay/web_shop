@@ -29,11 +29,11 @@
   "products": [ { "id": "moncler-puhovik-maya", "brand": "Moncler", "title": "Пуховик Maya",
     "name": "Moncler — Пуховик Maya", "category": "top", "type": "puffer", "price": 14900000,
     "sizes": ["S","M","L","XL","XXL"], "color": "black", "color2": "black", "new": true,
-    "photo": "assets/photos/moncler-maya.jpg" } ] }
+    "photo": "assets/photos/moncler-puhovik-maya.webp", "model": "assets/photos/moncler-puhovik-maya-m.webp" } ] }
 ```
 - `category` ∈ top | bottom | shoes | acc. `type` = id силуэта в `assets/items.svg`:
   puffer sheepskin jacket bomber shirt tee hoodie · jeans pants joggers shorts · sneakers hightop chunky loafers boots · cap bag belt.
-- `color`/`color2` — имя токена `--g-<имя>`. `photo` — необязательно: если есть, показывается фото вместо силуэта.
+- `color`/`color2` — имя токена `--g-<имя>`. `photo` — фото вещи, `model` — на модели (показывается при наведении и в галерее товара); без `photo` рисуется силуэт. Фото 720×900 WebP с Unsplash (лицензия Unsplash, коммерческое использование разрешено); `src`/`src_m` — id исходника на Unsplash.
 - `price` — целое в сумах (ЗАГЛУШКИ). Сервер читает только id, name, price, sizes.
 
 ## 2. Силуэты — `web/assets/items.svg`
@@ -59,3 +59,4 @@
 - 2026-10-12 apple-54: шрифт Bodoni Moda → Playfair Display (у Bodoni нет кириллицы); cloth.bin хранит x,y,z (3 int16 на точку) — для честного освещения шёлка в WebGL.
 - 2026-10-12 apple-54: добавлен cloth.bin v2 (дельты между кадрами, предложение apple-a2) — меньше в gzip.
 - 2026-10-12: редизайн v2 — мультибрендовый магазин на 4 страницы, WebGL-ткань и атлас убраны (лагало). Сайт 118 КБ / 34 КБ gzip.
+- 2026-10-12: реальные фото (Unsplash) — вещь + на модели, 99 файлов в web/assets/photos.
